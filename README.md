@@ -60,7 +60,7 @@
 
 <!-- ACKNOWLEDGMENTS -->
 ## 参考
-* [UniversalRP_TakeshiCho](https://github.com/devagame/UniversalRP_TakeshiCho)
+* [UniversalRP](https://github.com/devagame/UniversalRP )
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
