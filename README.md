@@ -34,13 +34,12 @@
 
 
 ## 使用
-UniversalRenderer.cs 有2个功能开关
-public static bool sUISplitEnable = true; // 分辨率分离 ,场景相机可自由调节分辨率，ui相机为屏幕大小
-public static bool sIsGammaCorrectEnable = true; // ui gamma校对
+* UniversalRenderer.cs 有2个功能开关
+* public static bool sUISplitEnable = true; // 分辨率分离 ,场景相机可自由调节分辨率，ui相机为屏幕大小
+* public static bool sIsGammaCorrectEnable = true; // ui gamma校对
 
-1 阅读本库对URP12的修改，最好用对比工具和源码进行对比，例如：Beyond Compare 
-2 修改你的URP12 
-3 讲本库shader/URP-UI-Default.shader 拖到  Project Setting/Graphic/BuildinShader 里面，#替换#掉原来的 UI/Default shader
+* 阅读本库对URP12的修改， 修改你的URP12 ，最好用对比工具和源码进行对比，例如：Beyond Compare 
+* 把本库shader/URP-UI-Default.shader 拖到  Project Setting/Graphic/BuildinShader 里面，#替换#掉原来的 UI/Default shader
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -61,14 +60,8 @@ public static bool sIsGammaCorrectEnable = true; // ui gamma校对
 
 <!-- ACKNOWLEDGMENTS -->
 ## 参考
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [UniversalRP_TakeshiCho](https://github.com/devagame/UniversalRP_TakeshiCho)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
