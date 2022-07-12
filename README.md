@@ -40,7 +40,7 @@
 
 * 阅读本库对URP12的修改， 修改你的URP12 ，最好用对比工具和源码进行对比，例如：Beyond Compare 
 * 把本库shader/URP-UI-Default.shader 拖到  Project Setting/Graphic/BuildinShader 里面，#替换#掉原来的 UI/Default shader
-
+* 如果你打开了gamma ui 功能，而且UI相机不止使用UI/Default shade,还使用了TextMeshPro等的shader,请在最后的shader的 ps 里面，加上 lineToSRGB，做一次颜色校对，参考本库里面的 shader/TMP_SDF-Mobile.shader
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
