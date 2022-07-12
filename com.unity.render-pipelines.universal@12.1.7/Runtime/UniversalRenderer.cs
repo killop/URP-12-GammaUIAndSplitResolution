@@ -817,7 +817,7 @@ namespace UnityEngine.Rendering.Universal
             {
                 SetupFinalPassDebug(ref cameraData);
                 bool isLine = true;
-                if (sUISplitEnable && IsGammaCorrectEnable(ref cameraData))
+                if (IsGammaCorrectEnable(ref cameraData))
                 {
                     applyPostProcessing = false;
                     applyFinalPostProcessing = false;
@@ -897,7 +897,12 @@ namespace UnityEngine.Rendering.Universal
                         finalPostProcessPass.SetupFinalPass(sourceForFinalPass, true, false, false,true);
                         EnqueuePass(finalPostProcessPass);
                     }
-                    m_BlitPass.Setup(Screen.width, Screen.height, BlitPass.BlitColorTransform.Line2Gamma);
+                    BlitPass.BlitColorTransform transformMode = BlitPass.BlitColorTransform.None;
+                    if (sIsGammaCorrectEnable)
+                    {
+                        transformMode = BlitPass.BlitColorTransform.Line2Gamma;
+                    }
+                    m_BlitPass.Setup(Screen.width, Screen.height, transformMode);
                     EnqueuePass(m_BlitPass);
                 }
             }
@@ -905,7 +910,12 @@ namespace UnityEngine.Rendering.Universal
             {
                 if (sUISplitEnable && cameraData.nextIsUICamera)
                 {
-                    m_BlitPass.Setup(Screen.width, Screen.height, BlitPass.BlitColorTransform.Line2Gamma);
+                    BlitPass.BlitColorTransform transformMode = BlitPass.BlitColorTransform.None;
+                    if (sIsGammaCorrectEnable)
+                    {
+                        transformMode = BlitPass.BlitColorTransform.Line2Gamma;
+                    }
+                    m_BlitPass.Setup(Screen.width, Screen.height, transformMode);
                     EnqueuePass(m_BlitPass);
                 }
             }
