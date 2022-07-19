@@ -89,7 +89,11 @@ namespace UnityEngine.Rendering.Universal.Internal
             }
             RenderTargetIdentifier source;
             source = renderingData.cameraData.renderer.cameraColorTarget;
-            RenderingUtils.Blit(cmd, source, colorBuffer.GetFrontBuffer().id, m_BlitMaterial, 0, useDrawProceduleBlit);
+            RenderingUtils.Blit(cmd, source, colorBuffer.GetFrontBuffer().id, m_BlitMaterial, 0, useDrawProceduleBlit,
+                RenderBufferLoadAction.DontCare,
+                RenderBufferStoreAction.Store,
+                RenderBufferLoadAction.DontCare,
+                RenderBufferStoreAction.DontCare);
             CoreUtils.SetKeyword(cmd, ShaderKeywordStrings.LinearToSRGBConversion, false);
             CoreUtils.SetKeyword(cmd, ShaderKeywordStrings.SRGBToLinearConversion,false);
             if (needChangeSize)
