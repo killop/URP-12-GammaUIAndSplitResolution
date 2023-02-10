@@ -23,7 +23,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## 简单概述
-
+* !!!这个库的最新版本在我的[URP-12-Extension](https://github.com/killop/URP-12-Extension)里面，这个库使用URP 版本12.1.7在部分机型是有bug的（深度贴图适配问题）
 * 本库主要解决了在  线性工作流下，如何保持UI 相机还能够保持在 Gamma 颜色空间下工作
 * UI 相机的渲染不应该受到 任何 postprocess 和 finalProcess( 例如 fxaa 和 fsr) 的影响
 * 充分利用URP内置RenderTargetSwapBuff ,保持了原本代码一致性
